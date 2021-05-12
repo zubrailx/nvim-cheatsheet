@@ -1,0 +1,38 @@
+:![command] - execute shell command.
+
+
+Commands:
+	:set number - set numbers on the left side of the screen
+	
+	:set ic - ignore case
+	:set noic - switch off (for many commands)
+	:set invic - to toggle (for many commands)
+	:set hls - highlight all matching phrases
+	:set is - show partial matches for a search phrase
+	
+	you can write like this: :set hls is - pipe
+
+
+
+Работа с файлом: [Command]
+	q - close the window, discarding changes 
+	q! - close the window, without warning
+	qa! - close all without warning
+	x! | wq - save the file
+
+
+
+Перемещение: [Commands]
+	:$ - goto last line
+
+
+
+Редактирование [Commands]:
+	:s/old/new - replaces first match old on new in this line
+	:s/old/new/g - replaces all matches old on new in this line.
+	:#,#s/old/new/g - replaces all matches old on new between #, #.
+	:%s/old/new/g - replaces all matches in this document
+	../gc - to ask for confirmation after each time.
+	
+	:r [filename]- retrieving content of the file where the cursor is.
+	:r ![dir] - reads the output of the dir command and puts it below the cursor position.

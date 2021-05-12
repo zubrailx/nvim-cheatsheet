@@ -1,0 +1,76 @@
+Информация: [Normal]
+	<C-g> - to show your location in a file and file status
+	
+	/[sequence] 	- search for the sequence and goto it
+	n 				- search for the same phrase again
+	N 				- search for in the opposite direction
+	? 				- use instead of / to search from in the backward
+	
+	<C-o> 			- jump back in jump-list
+	<C-i> 			- jump forward in jump-list
+
+
+
+Перемещение: [Normal]
+	h 				- left
+	l 				- right
+	j 				- down
+	k 				- up
+	
+	$ 				- end of the line
+	0 				- beginning of the line
+	
+	ENTER [link] 	- goto the link
+	
+	G 				- goto the bottom of the file
+	gg 				- goto the beginning of the file
+	[number] G 		- goto the line of number
+	
+	% 				- when on brackets jumps on them ( -> ) works with: [], {}, ()
+	
+	e 				- end of this word (or next word)
+	w 				- to the beginning of the next word.         (CAN USE NUMBERS)
+
+
+
+Режимы:
+<C-o> - escapes insert to do one normal-mode command, after returns to insert mode
+
+ESC | <C-[> - goto normal mode
+
+v - goto view mode (After pressing : you could do something with highlighted text)
+R - goto replace mode
+
+
+
+Команда редактирования: operation + [count] + motion.
+
+
+Редактирование (Operations) [Normal]:
+	i - before character (goto insert mode)
+	a - after the cursor (goto insert mode)
+	A - append the line
+	
+	d - delete the symbol/word
+	d [number] d - delete whole line
+	
+	u - undo the command
+	U - fix whole line
+	<C-r> - redo the commands (undo undos)
+	
+	r - replace character under the cursor
+	R - replace until something (goto replace mode)
+	
+	c - delete the chars and goto insert mode
+	
+	o - open the line below (create a new line) and place you in insert mode on this line
+	
+	p - put the line below the cursor (from vim register)
+	y - yank (copy)
+	yw - yank one word
+
+
+Редактирование (Motions):
+$ | Shift - to the end of the line 
+e - to the end of this word
+w - to the beginning of the next word
