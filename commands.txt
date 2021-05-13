@@ -1,8 +1,29 @@
 :![command] - execute shell command.
 
+:help [subject]
+
+:help vimrc-intro
+:help insert-index 
+:help user-manual
+:help deleting
+:help index 
+:help -t
+
+
+HELP PREFIXES
+normal-mode 			- (nothing)				- :help x
+control chars			- CTRL- 				- :help CTRL-u 
+visual-mode 			- v 					- :help v_u
+insert-mode 			- i 					- :help i_<Esc>
+ex-mode 				- :						- :help :quit
+command-line editing	- c 					- :help c_<Del>
+Vim command args		- -						- :help -r 
+Options					- '(both ends)'			- :help 'textwidth'
+
+
 
 Commands:
-	:set number - set numbers on the left side of the screen
+	:set (no/incv)number - set numbering on the left side of the screen
 	
 	:set ic - ignore case
 	:set noic - switch off (for many commands)
