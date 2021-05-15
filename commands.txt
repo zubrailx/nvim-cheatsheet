@@ -11,49 +11,49 @@
 
 
 HELP PREFIXES
-normal-mode 			- (nothing)				- :help x
-control chars			- CTRL- 				- :help CTRL-u 
-visual-mode 			- v 					- :help v_u
-insert-mode 			- i 					- :help i_<Esc>
-ex-mode 				- :						- :help :quit
-command-line editing	- c 					- :help c_<Del>
-Vim command args		- -						- :help -r 
-Options					- '(both ends)'			- :help 'textwidth'
+normal-mode 						- (nothing)				- :help x
+control chars						- CTRL 						- :help CTRL-u 
+visual-mode 						- v 							- :help v_u
+insert-mode 						- i 							- :help i_<Esc>
+ex-mode 								- :								- :help :quit
+command-line editing		- c 							- :help c_<Del>
+Vim command args				- 								- :help -r 
+Options									- '(both ends)'		- :help 'textwidth'
 
 
 
 Commands:
 	:set (no/incv)number - set numbering on the left side of the screen
 	
-	:set ic - ignore case
-	:set noic - switch off (for many commands)
-	:set invic - to toggle (for many commands)
-	:set hls - highlight all matching phrases
-	:set is - show partial matches for a search phrase
+	:set ic 							- ignore case
+	:set noic 						- switch off (for many commands)
+	:set invic 						- to toggle (for many commands)
+	:set hls 							- highlight all matching phrases
+	:set is 							- show partial matches for a search phrase
 	
 	you can write like this: :set hls is - pipe
 
 
 
 Работа с файлом: [Command]
-	q - close the window, discarding changes 
-	q! - close the window, without warning
-	qa! - close all without warning
-	x! | wq - save the file
+	q 										- close the window, discarding changes 
+	q! 										- close the window, without warning
+	qa! 									- close all without warning
+	x! | wq 							- save the file
 
 
 
 Перемещение: [Commands]
-	:$ - goto last line
+	:$ 										- goto last line
 
 
 
 Редактирование [Commands]:
-	:s/old/new - replaces first match old on new in this line
-	:s/old/new/g - replaces all matches old on new in this line.
-	:#,#s/old/new/g - replaces all matches old on new between #, #.
-	:%s/old/new/g - replaces all matches in this document
-	../gc - to ask for confirmation after each time.
+	:s/old/new 						- replaces first match old on new in this line
+	:s/old/new/g 					- replaces all matches old on new in this line.
+	:#,#s/old/new/g 			- replaces all matches old on new between #, #.
+	:%s/old/new/g 				- replaces all matches in this document
+	../gc 								- to ask for confirmation after each time.
 	
-	:r [filename]- retrieving content of the file where the cursor is.
-	:r ![dir] - reads the output of the dir command and puts it below the cursor position.
+	:r [filename] 				- retrieving content of the file where the cursor is.
+	:r ![dir] 						- reads the output of the dir command and puts it below the cursor position.
