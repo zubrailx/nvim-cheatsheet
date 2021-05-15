@@ -1,64 +1,68 @@
 Информация: [Normal]
-	<C-g> - to show your location in a file and file status (g + <C-g)
+	<C-g>         - to show your location in a file and file status (g + <C-g)
 	
-	/[sequence] 	- search for the sequence and goto it
-	n 				- search for the same phrase again
-	N 				- search for in the opposite direction
-	? 				- use instead of / to search from in the backward
+	/[sequence]   - search for the sequence and goto it
+	n             - search for the same phrase again
+	N             - search for in the opposite direction
+	?             - use instead of / to search from in the backward
 	
-	<C-d>			- show the list of commands, that starts the same 
-	<Tab>			- complete the command 
+	<C-d>         - show the list of commands, that starts the same 
+	<Tab>         - complete the command 
 	
 
-	ZZ 				- close the window and commit changes
+	ZZ            - close the window and commit changes
+
+
 
 Перемещение: [Normal] 		" can use counts (3e)
-	h 				- left
-	l 				- right
-	j 				- down
-	k 				- up
+	h             - left
+	l             - right
+	j             - down
+	k             - up
 	
-	$ 				- end of the line, 2$ - next line, 3$ ..., also <End>, <kEnd>
-	0 				- beginning of the line, also <Home>, <kHome>
-	^				- first non-blank character
+	$             - end of the line, 2$ - next line, 3$ ..., also <End>, <kEnd>
+	0             - beginning of the line, also <Home>, <kHome>
+	^             - first non-blank character
 	
-	ENTER [link] 	- goto the link
+	ENTER [link]  - goto the link
 	
-	G 				- goto the bottom of the file
-	gg 				- goto the beginning of the file
-	[number] G 		- goto the line of number
+	G             - goto the bottom of the file
+	gg            - goto the beginning of the file
+	[number] G    - goto the line of number
 	
-	% 				- when on brackets jumps on them ( -> ) works with: [], {}, ()
+	%             - when on brackets jumps on them ( -> ) works with: [], {}, ()
 	
-	e 				- end of this word (or next word)
-	w 				- to the beginning of the next word. 
-	d 				- back one word (like w)
+	e             - end of this word (or next word)
+	w             - to the beginning of the next word. 
+	b             - back one word (like w)
 	
-	<C-o> 			- jump back in jump-list
-	<C-i> 			- jump forward in jump-list
+	<C-o          - jump back in jump-list
+	<C-i          - jump forward in jump-list
 	
-	<C-w><C-w>		- jump from one window to another
+	<C-w><C-w>    - jump from one window to another
 	
-	<C-]>			- go to the hyperlink
-	<C-T>			- get back (pop the tag off)
+	<C-]>         - go to the hyperlink
+	<C-T>         - get back (pop the tag off)
 	
-	f[char]			- search along the current line (you need to go to e -> print fy)
-	F				- search to the lest
-	t 				- like f, but one character earlier
-	T				- same idea
+	f[char]       - search along the current line (you need to go to e -> print fy)
+	F             - search to the lest
+	t             - like f, but one character earlier
+	T             - same idea
 	
-	<C-U>			- scroll you down half the screen (up you)
-	<C-D>			- scroll you up the screen (down you)
+	<C-U>         - scroll you down half the screen (up you)
+	<C-D>         - scroll you up the screen (down you)
 
-<Esc>				- abort the command
+	<Esc>         - abort the command
+
+
 
 Режимы:
-<C-o> - escapes insert to do one normal-mode command, after returns to insert mode
+	<C-o>           - escapes insert to do one normal-mode command, after returns to insert mode
 
-ESC | <C-[> - goto normal mode
+	ESC | <C-[>     - goto normal mode
 
-v - goto view mode (After pressing : you could do something with highlighted text)
-R - goto replace mode
+	v               - goto view mode (After pressing : you could do something with highlighted text)
+	R               - goto replace mode
 
 
 
@@ -66,33 +70,33 @@ R - goto replace mode
 
 
 Редактирование (Operations) [Normal]:			" can use counts (3a!) = (a + !!!)
-	i - before character (goto insert mode)
-	a - after the cursor (goto insert mode)
-	A - append the line
+	i             - before character (goto insert mode)
+	a             - after the cursor (goto insert mode)
+	A             - append the line
 	
-	x - delete the symbol
+	x             - delete the symbol
 	
-	d - delete the symbol/word
-	d [number] d - delete whole line
+	d             - delete the symbol/word
+	d [number] d  - delete whole line
 	
-	u - undo the command
-	U - fix whole line
-	<C-r> - redo the last change (undo undos)
+	u             - undo the command
+	U             - fix whole line
+	<C-r>         - redo the last change (undo undos)
 	
-	r - replace character under the cursor
-	R - replace until something (goto replace mode)
+	r             - replace character under the cursor
+	R             - replace until something (goto replace mode)
 	
-	c - delete the chars and goto insert mode
+	c             - delete the chars and goto insert mode
 	
-	o - open the line below (create a new line) and place you in insert mode on this line
-	O - open the line upper 
-	
-	p - put the line below the cursor (from vim register)
-	y - yank (copy)
-	yw - yank one word
+	o             - open the line below (create a new line) and place you in insert mode on this line
+	O             - open the line upper 
+
+	p             - put the line below the cursor (from vim register)
+	y             - yank (copy)
+	yw            - yank one word
 
 
 Редактирование (Motions):				" can use counts
-$ | Shift - to the end of the line 
-e - to the end of this word
-w - to the beginning of the next word
+$ | Shift       - to the end of the line 
+e               - to the end of this word
+w               - to the beginning of the next word
