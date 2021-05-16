@@ -12,7 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'preservim/nerdcommenter'
 Plug 'ervandew/supertab'
-
+Plug 'https://github.com/lyokha/vim-xkbswitch'
 call plug#end()
 
 au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.cs,*.rkt,*.h,*.html
@@ -30,11 +30,11 @@ if has("win32")
     set shellredir=>
 endif
 
-
+let g:XkbSwitchEnabled = 1
+let g:XkbSwitchLib = 'C:\Program Files\Neovim\bin\libxkbswitch64.dll'
 set guioptions= "Отключаем панели прокрутки в GUI
 set showtabline=0 "Отключаем панель табов (окошки FTW)
 set ttimeoutlen=10 "Понижаем задержку ввода escape последовательностей
-
 
 syntax on
 
