@@ -9,6 +9,9 @@
 :help index 
 :help -t
 
+:digraphs - to print character, that can't be printed with keyboard
+:digr
+
 
 HELP PREFIXES
 normal-mode             - (nothing)          - :help x

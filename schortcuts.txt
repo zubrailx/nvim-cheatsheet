@@ -36,8 +36,8 @@
 	w             - to the beginning of the next word. 
 	b             - back one word (like w)
 	
-	<C-o          - jump back in jump-list
-	<C-i          - jump forward in jump-list
+	<C-o>         - jump back in jump-list
+	<C-i>         - jump forward in jump-list
 	
 	<C-w><C-w>    - jump from one window to another
 	
@@ -45,7 +45,7 @@
 	<C-T>         - get back (pop the tag off)
 	
 	f[char]       - search along the current line (you need to go to e -> print fy)
-	F             - search to the lest
+	F             - search backward
 	t             - like f, but one character earlier
 	T             - same idea
 	
@@ -53,7 +53,6 @@
 	<C-D>         - scroll you up the screen (down you)
 
 	<Esc>         - abort the command
-
 
 
 Режимы:
@@ -85,8 +84,10 @@
 	
 	r             - replace character under the cursor
 	R             - replace until something (goto replace mode)
+	~             - change the character case (inv you are on)
 	
-	c             - delete the chars and goto insert mode
+	c             - delete the chars and goto insert mode (cw - delete the word up to the space, but dw deletes the word AND space)
+	cc            - same idea like with dd. (deletes whole line)
 	
 	o             - open the line below (create a new line) and place you in insert mode on this line
 	O             - open the line upper 
@@ -94,9 +95,22 @@
 	p             - put the line below the cursor (from vim register)
 	y             - yank (copy)
 	yw            - yank one word
+	
+	.             - REPEAT THE PREVIOUS COMMAND
+	
+	[count]J      - join the lines
+	
+	<C-K>[char]   - to print a digraph symbol (non-printable on keyboard) while in insert mode
+	
+MACROS:
+	qa            - start recording macros, where a is a register [a-z] where you can put this macros 
+	q             - finish recording macros
 
+d3w - delete three words
+3dw - delete one word three times
 
 Редактирование (Motions):				" can use counts
 $ | Shift       - to the end of the line 
 e               - to the end of this word
 w               - to the beginning of the next word
+f               - up to the symbol
