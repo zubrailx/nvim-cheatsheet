@@ -1,8 +1,10 @@
 Информация: [Normal]
 	<C-g>         - to show your location in a file and file status (g + <C-g)
 	
-	/[sequence]   - search for the sequence and goto it
-	n             - search for the same phrase again
+	/[sequence]   - search for the sequence and goto it (you need to put / befor .*[]ˆ%/\?~$ symbols use them in find field.) 
+	                also has the search history /<Up> to search the previous request
+					
+	n or /<Enter> - search for the same phrase again
 	N             - search for in the opposite direction
 	?             - use instead of / to search from in the backward
 	
@@ -13,6 +15,12 @@
 	ZZ            - close the window and commit changes
 
 
+REGULAR EXPRESSIONS:
+	^             - beginning of the line 
+	$             - end of the line 
+	.             - match any single character 
+	\[character]  - turn off the special meaning of the character 
+	
 
 Перемещение: [Normal] 		" can use counts (3e)
 	h             - left

@@ -32,6 +32,8 @@ endif
 
 let g:XkbSwitchEnabled = 1
 let g:XkbSwitchLib = 'C:\Program Files\Neovim\bin\libxkbswitch64.dll'
+
+
 set guioptions= "Отключаем панели прокрутки в GUI
 set showtabline=0 "Отключаем панель табов (окошки FTW)
 set ttimeoutlen=10 "Понижаем задержку ввода escape последовательностей

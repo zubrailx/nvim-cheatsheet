@@ -31,8 +31,10 @@ Commands:
 	:set ic               - ignore case
 	:set noic             - switch off (for many commands)
 	:set invic            - to toggle (for many commands)
-	:set hls              - highlight all matching phrases
+	:set hls[earch]       - highlight all matching phrases
 	:set is               - show partial matches for a search phrase
+	:nohlsearch           - clear the current highlighting
+	:set incsearch        - the editor starts finding matches when you begin to write
 	
 	you can write like this: :set hls is - pipe
 
