@@ -15,14 +15,22 @@ Plug 'ervandew/supertab'
 Plug 'https://github.com/lyokha/vim-xkbswitch'
 call plug#end()
 
-au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.cs,*.rkt,*.h,*.html
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=120 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix |
+" au BufNewFile,BufRead *.py,*.java,*.cpp,*.c,*.cs,*.rkt,*.h,*.html
+"    \ set tabstop=4 |
+"    \ set softtabstop=4 |
+"    \ set shiftwidth=4 |
+"    \ set textwidth=120 |
+"    \ set expandtab |
+"    \ set autoindent |
+"    \ set fileformat=unix |
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=120
+set expandtab
+set autoindent
+set fileformat=unix
 
 if has("win32")
     set shellcmdflag=/c\ powershell.exe\ -NoLogo\ -NoProfile\ -NonInteractive\ -ExecutionPolicy\ RemoteSigned
@@ -95,4 +103,6 @@ colorscheme rakr
 set encoding=utf-8
 scriptencoding utf-8
 setglobal fileencoding=utf-8
+
+
 

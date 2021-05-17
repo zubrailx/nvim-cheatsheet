@@ -4,7 +4,7 @@ VIM BOOK:
 (+) 3. Searching
 (+) 4. Text Blocks and Multiple Files
 (+) 5. Windows
-(-) 6. Basic Visual Mode
+(?) 6. Basic Visual Mode
 (-) 7. Commands for Programmers
 (-) 8. Basic Abbreviations, Keyboard Mapping, and Initialization Files
 (-) 9. Basic Command-Mode Commands
@@ -37,7 +37,7 @@ My order for covering:
 (+) 3. Searching
 (+) 4. Text Blocks and Multiple Files
 (+) 5. Windows
-(-) 6. Basic Visual Mode
+(?) 6. Basic Visual Mode
 (-) 7. Commands for Programmers
 (-) 12. Automatic Completion
 (-) 13. Autocommands

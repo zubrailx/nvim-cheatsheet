@@ -69,6 +69,7 @@ REGULAR EXPRESSIONS:
 	<C-o>           - escapes insert to do one normal-mode command, after returns to insert mode
 
 	ESC | <C-[>     - goto normal mode
+	<C-c>           - the same 
 
 	v               - goto view mode (After pressing : you could do something with highlighted text)
 	R               - goto replace mode
@@ -77,7 +78,7 @@ REGULAR EXPRESSIONS:
 
 Команда редактирования: operation + [count] + motion.
 
-Редактирование (Operations) [Normal]:			" can use counts (3a!) = (a + !!!)
+Редактирование (Operations) [Normal mode]:			" can use counts (3a!) = (a + !!!)
 	i             - before character (goto insert mode)
 	a             - after the cursor (goto insert mode)
 	A             - append the line
@@ -118,6 +119,13 @@ d3w - delete three words
 3dw - delete one word three times
 	
 	
+Редактирование (Motions):				" can use counts
+$ | Shift       - to the end of the line 
+e               - to the end of this word
+w               - to the beginning of the next word
+f               - up to the symbol
+
+	
 	
 MACROS, MARKS:
 	qa            - start recording macros, where a is a register [a-z] where you can put this macros 
@@ -127,14 +135,6 @@ MACROS, MARKS:
 	d'a           - delete to mark 
 	y'a           - yank to mark ...
 	
-
-
-Редактирование (Motions):				" can use counts
-$ | Shift       - to the end of the line 
-e               - to the end of this word
-w               - to the beginning of the next word
-f               - up to the symbol
-
 
 
 WINDOWS:
@@ -148,3 +148,29 @@ WINDOWS:
 	[count]<C-w>-   - decrease by count 
 	<C-w>=          - makes all windows the same size
 	[count]<C-w>_   - makes the current window count lines high
+	
+	
+	
+Visual Mode:
+	v               - goto visual mode 
+	<C-V>           - highlight a rectangle [goto v-block mode]
+	
+	d               - delete the highlighted text 
+	D               - delete the highlighted lines 
+	
+	y               - place the highlighted text in the register 
+	Y               - place the highlighted lines in the register    
+	
+	c               - delete the highlighted text and goes to insert mode 
+	C               - same but with lines 
+	
+	J               - join all highlighted lines in one line 
+	gJ              - join the lines without adding spaces 
+	
+	r, R , s, S = c
+	
+	>               - selects lines by one tab 
+	<               - in reverse 
+	=               - change indents in the text (idk how) 
+	
+	K               - works like 'man' command, so uses highlighted text as the keywords
