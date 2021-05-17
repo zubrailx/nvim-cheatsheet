@@ -1,7 +1,7 @@
-:![command] - execute shell command.
+:![command]  - execute shell command.
+:!![command] - execute command and put its output in the file 
 
 :help [subject]
-
 :help vimrc-intro
 :help insert-index 
 :help user-manual
@@ -12,16 +12,21 @@
 :digraphs - to print character, that can't be printed with keyboard
 :digr
 
+:marks                 - check all the marks existed ('-last place of the current file,
+                                                      "-the place where you were at the file before closing it 
+													  [-the start of the last insert 
+													  ]-the end of the last insert
+
 
 HELP PREFIXES
-normal-mode             - (nothing)          - :help x
-control chars           - CTRL               - :help CTRL-u 
-visual-mode             - v                  - :help v_u
-insert-mode             - i                  - :help i_<Esc>
-ex-mode                 - :                  - :help :quit
-command-line editing    - c                  - :help c_<Del>
-Vim command args        -                    - :help -r 
-Options                 - '(both ends)'      - :help 'textwidth'
+	normal-mode             - (nothing)          - :help x
+	control chars           - CTRL               - :help CTRL-u 
+	visual-mode             - v                  - :help v_u
+	insert-mode             - i                  - :help i_<Esc>
+	ex-mode                 - :                  - :help :quit
+	command-line editing    - c                  - :help c_<Del>
+	Vim command args        -                    - :help -r 
+	Options                 - '(both ends)'      - :help 'textwidth'
 
 
 
@@ -36,18 +41,45 @@ Commands:
 	:nohlsearch           - clear the current highlighting
 	:set incsearch        - the editor starts finding matches when you begin to write
 	
-	you can write like this: :set hls is - pipe
+	:set autowrite        - write it when you always want to save changes 
+	
+You can write commands using pipe - :set hls is
 
 
 
 Работа с файлом: [Command]
-	q                     - close the window, discarding changes 
-	q!                    - close the window, without warning
-	qa!                   - close all without warning
-	x! | wq               - save the file
+	:q                    - close the window, discarding changes 
+	:q!                   - close the window, without warning
+	:qa!                  - close all without warning
+	:x! | wq              - save the file
+	:vi [file]            - close the current file and begin editing another one 
+	:w[rite]              - write the changes 
+	:view [file]          - works like vi, but the new file will be opened in read only mode 
+
+	:[count] next         - open the file in the list that is next to this one 
+	:previous  or Next    - backwards
+	:wprevious            - write and previous
+	
+	:args                 - show the file you are editing
+	
+	:first or rewind      - open first file in the list 
+	:last                 - open last file in the list 
 
 
 
+Интересная фича при переключении между файлами:
+
+first start: $ nvim file1.txt file2.txt file3.txt - opens the file1.txt. 
+
+To switch the file print |:next| or |:previous| and save changes (or overload using !)
+
+	1 <C-^>               - open file1.txt					"When first load there is no alternative file before you switch anywhere
+	2 <C-^>               - open file2.txt 
+	3 <C-^>               - open file3.txt 
+	<C-^>                 - open file2.txt (previous(alternative) file)
+	
+	
+	
 Перемещение: [Commands]
 	:$                    - goto last line
 
