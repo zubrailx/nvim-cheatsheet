@@ -134,3 +134,17 @@ $ | Shift       - to the end of the line
 e               - to the end of this word
 w               - to the beginning of the next word
 f               - up to the symbol
+
+
+
+WINDOWS:
+	<C-w> w         - move the cursor to the window which is down in loop
+	<C-w><C-w>      - same 
+	
+	<C-w> j         - move the cursor to the window which is down
+	<C-w> k         - move the cursor to the window which is up
+	
+	[count]<C-w>+   - increase the count of lines by 10 in opened window 
+	[count]<C-w>-   - decrease by count 
+	<C-w>=          - makes all windows the same size
+	[count]<C-w>_   - makes the current window count lines high
