@@ -31,7 +31,7 @@ HELP PREFIXES
 
 
 
-SET COMMANDS:
+View commands:
 	:set (no/incv)number  - set numbering on the left side of the screen
 	
 	:set ic               - ignore case
@@ -143,3 +143,24 @@ flags
 	#             - alternate buffer 
 	+             - file has been modified 
 	
+	
+	
+Programming stuff:
+	:syntax on 
+	
+	:set background[=light|dark]
+	:set filetype=c               - now vim understands, that you are editing C file 
+	:help new-filetype            - if you want to make this setting automatically
+	
+Running the color test:
+	:edit $VIMRUNTIME/syntax/colortest.vim 
+	:source %
+	
+	:set shiftwidth=4 
+	
+	
+	:set cindent          - C-style indentation (C, C++, Java, and so on)
+	:set smartindent      - if } then add remove one shift, if { then add one shift 
+	:set autoindent       - new line are indented the same as the previous line 
+	
+	<C-d>                 - back up one shift width

@@ -69,7 +69,7 @@ REGULAR EXPRESSIONS:
 	<C-o>           - escapes insert to do one normal-mode command, after returns to insert mode
 
 	ESC | <C-[>     - goto normal mode
-	<C-c>           - the same 
+	<C-c>           - just go to normal mode (commands before acts like they are in insert mode) 
 
 	v               - goto view mode (After pressing : you could do something with highlighted text)
 	R               - goto replace mode
@@ -174,3 +174,19 @@ Visual Mode:
 	=               - change indents in the text (idk how) 
 	
 	K               - works like 'man' command, so uses highlighted text as the keywords
+	
+Visual-Block mode: (:help v_b_r)
+	I               - to enter insert mode follewed by the text to insert 
+	c               - delete the block and start as I
+	C               - delete text from the left edge to the end of the line 
+	A               - append the text to the block 
+	rchar           - replace the selected text with a single char 
+	
+	<               - removes one swift 
+	>               - add one shift to the beginning of each selected line in block
+	
+
+
+Programming:
+	[count]<<              - shift the text to the left 
+	[count]>>              - shift the text to the right

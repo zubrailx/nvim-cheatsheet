@@ -1,2 +1,5 @@
-Filtering (p40)
-Split + command (p47)
+(p40) Filtering 
+(p47) Split + command 
+(p60) Commands for Programmers <C-]>
+(p68) UNIX Syntax Color problems 
+ 
