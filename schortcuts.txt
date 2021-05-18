@@ -126,7 +126,7 @@ w               - to the beginning of the next word
 f               - up to the symbol
 
 	
-	
+	м  
 MACROS, MARKS:
 	qa            - start recording macros, where a is a register [a-z] where you can put this macros 
 	q             - finish recording macros
@@ -190,3 +190,25 @@ Visual-Block mode: (:help v_b_r)
 Programming:
 	[count]<<              - shift the text to the left 
 	[count]>>              - shift the text to the right
+	
+	<C-d>                  - back up one shift width
+	
+	[ <C-i>                - jump to the word under the cursor 
+	[ <C-i>                - jump to the next word that is under the cursor 	
+	gd  | gD               - highlights all the word equals that is under the cursor 
+	
+	%                      - jump between pair symbols like {[( or  jump between pair /* */ comments #ifdef, #endif, #end, #if
+	
+	>%                     - shift everything that is between {} in one level and {} also 
+	<%                     - same idea 
+	
+	>i{                    - shift everything that is between {} in one level
+	<i{                    - same idea 
+	
+	K                      - works like man (or :help)
+	
+	<C-]>                  - hyperlink jump (tag jump) 
+	<C-t>                  - go back from hyperlink jump
+	
+	<C-W>]                 - split the window and jump to the tag under cursor 
+	

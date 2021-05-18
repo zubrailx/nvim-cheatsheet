@@ -38,8 +38,6 @@ My order for covering:
 (+) 4. Text Blocks and Multiple Files
 (+) 5. Windows
 (+) 6. Basic Visual Mode
-(?) 7. Commands for Programmers
+(+) 7. Commands for Programmers (up to 78)
 (-) 12. Automatic Completion
 (-) 13. Autocommands
-
-up to p73

@@ -158,9 +158,16 @@ Running the color test:
 	
 	:set shiftwidth=4 
 	
-	
+Programming:
 	:set cindent          - C-style indentation (C, C++, Java, and so on)
 	:set smartindent      - if } then add remove one shift, if { then add one shift 
 	:set autoindent       - new line are indented the same as the previous line 
 	
-	<C-d>                 - back up one shift width
+	
+	:tag [name]           - tag jumping in on function
+	:stag [name]          - split the window and jump
+	
+	:tag /[regular exp]   - search for the tag matches to regex
+	:tselect [name]       - returns the list of the tags with the following command.
+	
+	:set list             - enable the mode where $ and ^I (tabs) symbols are shown

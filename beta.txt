@@ -2,4 +2,5 @@
 (p47) Split + command 
 (p60) Commands for Programmers <C-]>
 (p68) UNIX Syntax Color problems 
- 
+(p75) Jump to Macro Definition
+(p79-90) Tags, Taking care (cuz now useless)
