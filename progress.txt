@@ -10,7 +10,7 @@ VIM BOOK:
 (-) 9. Basic Command-Mode Commands
 (-) 10. Basic GUI Usage
 (-) 11. Dealing with Text Files
-(-) 12. Automatic Completion
+(+) 12. Automatic Completion
 (-) 13. Autocommands
 (-) 14. File Recovery and Command-Line Arguments
 (-) 15. Miscellaneous Commands
@@ -39,5 +39,4 @@ My order for covering:
 (+) 5. Windows
 (+) 6. Basic Visual Mode
 (+) 7. Commands for Programmers (up to 78)
-(-) 12. Automatic Completion
-(-) 13. Autocommands
+(+) 12. Automatic Completion

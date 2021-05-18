@@ -212,3 +212,22 @@ Programming:
 	
 	<C-W>]                 - split the window and jump to the tag under cursor 
 	
+	
+	
+Automatic Completion:
+	<C-p>                  - autocompletion (type again <C-p> to look for another match) 
+	<C-n>                  - search forward
+	
+	<C-y>                  - scroll down 
+	<C-e>                  - scroll up 
+	
+Selective search <C-x> submode:
+	<C-d>          - Macro definitions 
+	<C-f>          - Filenames 
+	<C-k>          - Dictionary
+	<C-i>          - current files and #included files 
+	<C-l>          - whole lines 
+	<C-]>          - tags 
+	<C-p>          - same as <C-p> 
+	<C-n>          - same as <C-n>
+	

@@ -171,3 +171,17 @@ Programming:
 	:tselect [name]       - returns the list of the tags with the following command.
 	
 	:set list             - enable the mode where $ and ^I (tabs) symbols are shown
+	
+	:set ignorecase       - ignore case for command <C-p>
+	:set complete=key,key,key  - controls where Vim searches for words
+	
+key: (p127)
+	.         - current file 
+	b         - files in loaded buffers, not in a window 
+	d         - definitions in the current file in files included by a #include directive 
+	i         - files included by the current filethrough the use of a #include directive 
+	k         - the file defined by the 'dictionary' option 
+	kfile     - the file named {file}
+	t         - tags file 
+	u         - unloaded buffers 
+	w         - files in other windows 
