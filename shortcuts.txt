@@ -13,8 +13,8 @@
 	
 	ZZ            - close the window and commit changes
 
-
-
+	<Esc>         - abort the command
+---------------------------------------------------------------------------------------------------
 REGULAR EXPRESSIONS:
 	^             - beginning of the line 
 	$             - end of the line 
@@ -22,7 +22,7 @@ REGULAR EXPRESSIONS:
 	\[character]  - turn off the special meaning of the character 
 	
 
-
+---------------------------------------------------------------------------------------------------
 Перемещение: [Normal] 		" can use counts (3e)
 	h             - left
 	l             - right
@@ -53,18 +53,19 @@ REGULAR EXPRESSIONS:
 	<C-]>         - go to the hyperlink
 	<C-T>         - get back (pop the tag off)
 	
+	<C-U>         - scroll you down half the screen (up you)
+	<C-D>         - scroll you up the screen (down you)
+	
+	
+---------------------------------------------------------------------------------------------------
+Searching:
 	f[char]       - search along the current line (you need to go to e -> print fy)
 	F             - search backward
 	t             - like f, but one character earlier
 	T             - same idea
-	
-	<C-U>         - scroll you down half the screen (up you)
-	<C-D>         - scroll you up the screen (down you)
-
-	<Esc>         - abort the command
 
 
-
+---------------------------------------------------------------------------------------------------
 Режимы:
 	<C-o>           - escapes insert to do one normal-mode command, after returns to insert mode
 
@@ -75,7 +76,7 @@ REGULAR EXPRESSIONS:
 	R               - goto replace mode
 
 
-
+---------------------------------------------------------------------------------------------------
 Команда редактирования: operation + [count] + motion.
 
 Редактирование (Operations) [Normal mode]:			" can use counts (3a!) = (a + !!!)
@@ -118,7 +119,8 @@ REGULAR EXPRESSIONS:
 d3w - delete three words
 3dw - delete one word three times
 	
-	
+
+---------------------------------------------------------------------------------------------------
 Редактирование (Motions):				" can use counts
 $ | Shift       - to the end of the line 
 e               - to the end of this word
@@ -126,7 +128,7 @@ w               - to the beginning of the next word
 f               - up to the symbol
 
 	
-	м  
+---------------------------------------------------------------------------------------------------
 MACROS, MARKS:
 	qa            - start recording macros, where a is a register [a-z] where you can put this macros 
 	q             - finish recording macros
@@ -136,7 +138,7 @@ MACROS, MARKS:
 	y'a           - yank to mark ...
 	
 
-
+---------------------------------------------------------------------------------------------------
 WINDOWS:
 	<C-w> w         - move the cursor to the window which is down in loop
 	<C-w><C-w>      - same 
@@ -150,7 +152,7 @@ WINDOWS:
 	[count]<C-w>_   - makes the current window count lines high
 	
 	
-	
+---------------------------------------------------------------------------------------------------	
 Visual Mode:
 	v               - goto visual mode 
 	<C-V>           - highlight a rectangle [goto v-block mode]
@@ -174,7 +176,8 @@ Visual Mode:
 	=               - change indents in the text (idk how) 
 	
 	K               - works like 'man' command, so uses highlighted text as the keywords
-	
+
+---------------------------------------------------------------------------------------------------	
 Visual-Block mode: (:help v_b_r)
 	I               - to enter insert mode follewed by the text to insert 
 	c               - delete the block and start as I
@@ -186,7 +189,7 @@ Visual-Block mode: (:help v_b_r)
 	>               - add one shift to the beginning of each selected line in block
 	
 
-
+---------------------------------------------------------------------------------------------------
 Programming:
 	[count]<<              - shift the text to the left 
 	[count]>>              - shift the text to the right
@@ -213,14 +216,15 @@ Programming:
 	<C-W>]                 - split the window and jump to the tag under cursor 
 	
 	
-	
+---------------------------------------------------------------------------------------------------	
 Automatic Completion:
 	<C-p>                  - autocompletion (type again <C-p> to look for another match) 
 	<C-n>                  - search forward
 	
 	<C-y>                  - scroll down 
 	<C-e>                  - scroll up 
-	
+
+---------------------------------------------------------------------------------------------------
 Selective search <C-x> submode:
 	<C-d>          - Macro definitions 
 	<C-f>          - Filenames 
@@ -230,4 +234,4 @@ Selective search <C-x> submode:
 	<C-]>          - tags 
 	<C-p>          - same as <C-p> 
 	<C-n>          - same as <C-n>
-	
+---------------------------------------------------------------------------------------------------
