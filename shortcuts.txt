@@ -235,3 +235,8 @@ Selective search <C-x> submode:
 	<C-p>          - same as <C-p> 
 	<C-n>          - same as <C-n>
 ---------------------------------------------------------------------------------------------------
+Registers:
+"[reg] [operation] - work with the data in the register
+    <C-r>          - while in insert mode [like "[reg]...]
+	
+---------------------------------------------------------------------------------------------------
