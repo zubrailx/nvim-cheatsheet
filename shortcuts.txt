@@ -1,29 +1,46 @@
-Информация: [Normal]
-	<C-g>         - to show your location in a file and file status (g + <C-g)
-	
-	/[sequence]   - search for the sequence and goto it (you need to put / befor .*[]ˆ%/\?~$ symbols use them in find field.) 
-	                also has the search history /<Up> to search the previous request
-					
-	n or /<Enter> - search for the same phrase again
-	N             - search for in the opposite direction
-	?             - use instead of / to search from in the backward
-	
-	<C-d>         - show the list of commands, that starts the same 
-	<Tab>         - complete the command 
-	
+Others:
+
+	.             - REPEAT THE PREVIOUS COMMAND
+
+	<C-K>[char]   - to print a digraph symbol (non-printable on keyboard) while in insert mode
+
+	K               - works like 'man' command, so uses highlighted text as the keywords
+
+---------------------------------------------------------------------------------------------------
+File:
+
 	ZZ            - close the window and commit changes
 
-	<Esc>         - abort the command
----------------------------------------------------------------------------------------------------
-REGULAR EXPRESSIONS:
-	^             - beginning of the line 
-	$             - end of the line 
-	.             - match any single character 
-	\[character]  - turn off the special meaning of the character 
-	
+
+
 
 ---------------------------------------------------------------------------------------------------
+Information: [Normal mode]
+
+*	<C-d>         - show the list of commands, that starts the same 
+
+	<Tab>         - complete the command 
+
+	<Esc>         - abort the command
+
+	<C-g>         - to show your location in a file and file status (g + <C-g)
+
+
+---------------------------------------------------------------------------------------------------
+REGULAR EXPRESSIONS:
+
+	^             - beginning of the line 
+
+	$             - end of the line 
+
+	.             - match any single character 
+
+	\[character]  - turn off the special meaning of the character 
+
+	
+---------------------------------------------------------------------------------------------------
 Перемещение: [Normal] 		" can use counts (3e)
+
 	h             - left
 	l             - right
 	j             - down
@@ -45,59 +62,107 @@ REGULAR EXPRESSIONS:
 	w             - to the beginning of the next word. 
 	b             - back one word (like w)
 	
+	<C-y>         - Scrolling up without moving cursor 
+    <C-e>         - Scrolling down without moving cursor
+
+
+Jumping:
+
+	<C-u>         - scroll you down half the screen (up you)
+	<C-d>         - scroll you up the screen (down you)
+
 	<C-o>         - jump back in jump-list
 	<C-i>         - jump forward in jump-list
 	
-	<C-w><C-w>    - jump from one window to another
 	
 	<C-]>         - go to the hyperlink
 	<C-T>         - get back (pop the tag off)
 	
-	<C-U>         - scroll you down half the screen (up you)
-	<C-D>         - scroll you up the screen (down you)
 	
+---------------------------------------------------------------------------------------------------
+WINDOWS:
+
+	<C-w> w         - move the cursor to the window which is down in loop
+	<C-w><C-w>      - same 
 	
+	<C-w> j         - move the cursor to the window which is down
+	<C-w> k         - move the cursor to the window which is up
+	
+
+	[count]<C-w>+   - increase the count of lines by 10 in opened window 
+	[count]<C-w>-   - decrease by count 
+
+	<C-w>=          - makes all windows the same size
+
+	[count]<C-w>_   - makes the current window count lines high to count
+	
+
 ---------------------------------------------------------------------------------------------------
 Searching:
-	f[char]       - search along the current line (you need to go to e -> print fy)
+	
+	/[sequence]   - search for the sequence and goto it (you need to put / befor .*[]ˆ%/\?~$ symbols 
+                    use them in find field.)
+                    also has the search history /<Up> to search the previous request
+
+	?             - use instead of '/' to search from in the backward
+
+	n or /<Enter> - search for the same phrase again
+	N             - search for in the opposite direction
+
+	f[char]       - search along the current LINE (you need to go to e -> print fy)
 	F             - search backward
+
 	t             - like f, but one character earlier
-	T             - same idea
+	T             - like F, but one character earlier
 
 
----------------------------------------------------------------------------------------------------
-Режимы:
-	<C-o>           - escapes insert to do one normal-mode command, after returns to insert mode
+Switching-Modes:
 
-	ESC | <C-[>     - goto normal mode
-	<C-c>           - just go to normal mode (commands before acts like they are in insert mode) 
+	<C-o>           - escapes INSERT to do one NORMAL-mode command, after returns to INSERT mode
 
-	v               - goto view mode (After pressing : you could do something with highlighted text)
-	R               - goto replace mode
+	ESC | <C-[>     - goto NORMAL mode
+
+*	<C-c>           - just go to NORMAL mode (commands before acts like they are in insert mode) 
+
+	v               - goto VIEW mode (After pressing : you could do something with highlighted text)
+    V               - goto VIEW-LINE mode
+
+	R               - goto REPLACE mode from NORMAL 
 
 
 ---------------------------------------------------------------------------------------------------
 Команда редактирования: operation + [count] + motion.
 
 Редактирование (Operations) [Normal mode]:			" can use counts (3a!) = (a + !!!)
-	i             - before character (goto insert mode)
-	a             - after the cursor (goto insert mode)
-	A             - append the line
+
+	i             - before character (goto INSERT mode from NORMAL)
+
+	a             - after the cursor (goto INSERT mode from NORMAL)
+	A             - append the line (goto INSERT mode)
 	
 	x             - delete the symbol
 	
 	d             - delete the symbol/word
 	d [number] d  - delete whole line
+
+*   [number] dd   - execute number of commands
 	
 	u             - undo the command
 	U             - fix whole line
+
 	<C-r>         - redo the last change (undo undos)
 	
 	r             - replace character under the cursor
 	R             - replace until something (goto replace mode)
+
 	~             - change the character case (inv you are on)
 	
-	c             - delete the chars and goto insert mode (cw - delete the word up to the space, but dw deletes the word AND space)
+	c             - delete the chars and goto insert mode (cw - delete the word up to the space,
+                    but dw deletes the word AND space)
+
+    c [space]     - delete the char and goto INSERT mode
+    c [move]      - delete the [move] and goto INSERT mode  [ex. cw - rem. one word in what you stay]
+
 	cc            - same idea like with dd. (deletes whole line)
 	
 	o             - open the line below (create a new line) and place you in insert mode on this line
@@ -105,56 +170,69 @@ Searching:
 
 	p             - put the line after the cursor (from vim register)
 	P             - put the text before the cursor
+
 	y             - yank (copy)
-	yy            - yank the whole line 
-	
-	yw            - yank one word
-	
-	.             - REPEAT THE PREVIOUS COMMAND
+	yy or Y       - yank the whole line 
+    
+	y [move]      - yank one word
 	
 	[count]J      - join the lines
 	
-	<C-K>[char]   - to print a digraph symbol (non-printable on keyboard) while in insert mode
 	
 d3w - delete three words
 3dw - delete one word three times
-	
+
 
 ---------------------------------------------------------------------------------------------------
 Редактирование (Motions):				" can use counts
-$ | Shift       - to the end of the line 
-e               - to the end of this word
-w               - to the beginning of the next word
-f               - up to the symbol
 
+    $ | Shift       - to the end of the line 
+
+    e               - to the end of this word
+    w               - to the beginning of the next word
+
+*   f               - up to the symbol
+
+    b               - one word back
 	
+
 ---------------------------------------------------------------------------------------------------
-MACROS, MARKS:
+MACROS, 
+
 	qa            - start recording macros, where a is a register [a-z] where you can put this macros 
+
 	q             - finish recording macros
-	
-	ma            - start the macros, where a is a register [a-z] where you can put the mark
-	d'a           - delete to mark 
-	y'a           - yank to mark ...
-	
+
+
+wiki:  https://vim.fandom.com/wiki/Macros - to hard...
 
 ---------------------------------------------------------------------------------------------------
-WINDOWS:
-	<C-w> w         - move the cursor to the window which is down in loop
-	<C-w><C-w>      - same 
+MARKS:
+
+A mark allows you to record your current position so you can return to it later. Each file can have
+mark a, but only one file can have mark A.
+
+	ma            - put the mark, where 'a' is key
+
+    'a            - goto mark
+
+	d'a           - delete up to mark 
+
+	y'a           - yank up to mark ...
 	
-	<C-w> j         - move the cursor to the window which is down
-	<C-w> k         - move the cursor to the window which is up
-	
-	[count]<C-w>+   - increase the count of lines by 10 in opened window 
-	[count]<C-w>-   - decrease by count 
-	<C-w>=          - makes all windows the same size
-	[count]<C-w>_   - makes the current window count lines high
-	
-	
+
+    :marks       - list of the current marks
+    :delmarks     - delete the mark
+
+
+wiki:  https://vim.fandom.com/wiki/Using_marks
+
 ---------------------------------------------------------------------------------------------------	
 Visual Mode:
+
 	v               - goto visual mode 
+    V               - goto visual-line mode
+
 	<C-V>           - highlight a rectangle [goto v-block mode]
 	
 	d               - delete the highlighted text 
@@ -173,17 +251,21 @@ Visual Mode:
 	
 	>               - selects lines by one tab 
 	<               - in reverse 
-	=               - change indents in the text (idk how) 
+
+*	=               - change indents in the text
 	
-	K               - works like 'man' command, so uses highlighted text as the keywords
 
 ---------------------------------------------------------------------------------------------------	
 Visual-Block mode: (:help v_b_r)
+
 	I               - to enter insert mode follewed by the text to insert 
+
 	c               - delete the block and start as I
 	C               - delete text from the left edge to the end of the line 
+
 	A               - append the text to the block 
-	rchar           - replace the selected text with a single char 
+
+	r[char]           - replace the selected text with a single char 
 	
 	<               - removes one swift 
 	>               - add one shift to the beginning of each selected line in block
@@ -191,52 +273,72 @@ Visual-Block mode: (:help v_b_r)
 
 ---------------------------------------------------------------------------------------------------
 Programming:
-	[count]<<              - shift the text to the left 
-	[count]>>              - shift the text to the right
+
+	[count]<<              - shift the text to the left from NORMAL mode
+    [count]>>              - shift the text to the right from NORMAL mode
 	
-	<C-d>                  - back up one shift width
+*	<C-d>                  - back up one shift width
 	
-	[ <C-i>                - jump to the word under the cursor 
-	[ <C-i>                - jump to the next word that is under the cursor 	
+*	[ <C-i>                - jump to the next word that is under the cursor 	
+
 	gd  | gD               - highlights all the word equals that is under the cursor 
 	
-	%                      - jump between pair symbols like {[( or  jump between pair /* */ comments #ifdef, #endif, #end, #if
+	%                      - jump between pair symbols like {[( or  jump between pair /* */ 
+                            comments #ifdef, #endif, #end, #if
 	
-	>%                     - shift everything that is between {} in one level and {} also 
+	>%                     - shift everything that is between {} in one level AND {} also 
 	<%                     - same idea 
 	
 	>i{                    - shift everything that is between {} in one level
 	<i{                    - same idea 
 	
-	K                      - works like man (or :help)
+*	<C-]>                  - hyperlink jump (tag jump) 
+*	<C-t>                  - go back from hyperlink jump
 	
-	<C-]>                  - hyperlink jump (tag jump) 
-	<C-t>                  - go back from hyperlink jump
-	
-	<C-W>]                 - split the window and jump to the tag under cursor 
+!*	<C-W>]                 - split the window and jump to the tag under cursor 
 	
 	
 ---------------------------------------------------------------------------------------------------	
 Automatic Completion:
-	<C-p>                  - autocompletion (type again <C-p> to look for another match) 
-	<C-n>                  - search forward
+
+	<C-p>                  - search the definition backwards
+	<C-n>                  - search the definition forward
 	
-	<C-y>                  - scroll down 
-	<C-e>                  - scroll up 
+    <Tab>                  - autocomplete
 
 ---------------------------------------------------------------------------------------------------
 Selective search <C-x> submode:
-	<C-d>          - Macro definitions 
-	<C-f>          - Filenames 
-	<C-k>          - Dictionary
-	<C-i>          - current files and #included files 
-	<C-l>          - whole lines 
-	<C-]>          - tags 
-	<C-p>          - same as <C-p> 
-	<C-n>          - same as <C-n>
+
+*	<C-d>          - Macro definitions 
+*	<C-f>          - Filenames 
+*	<C-k>          - Dictionarys
+*	<C-i>          - current files and #included files 
+*	<C-l>          - whole lines 
+*	<C-]>          - tags 
+*	<C-p>          - same as <C-p> 
+*	<C-n>          - same as <C-n>
+    
 ---------------------------------------------------------------------------------------------------
 Registers:
+
 "[reg] [operation] - work with the data in the register
+
     <C-r>          - while in insert mode [like "[reg]...]
 	
 ---------------------------------------------------------------------------------------------------
+== Работа с вкладками (a.k.a табами) ==
+
+    :tabnew [fname]          создать таб
+    :tabs                    вывести список табов
+    :tabn                    следующий таб
+    :tabp                    предыдущий таб
+    <n>gt                    перейти на таб #n
+    gt                       следующий таб
+    gT                       предыдущий таб
+    :tabm +1                 переместить таб вперед на одну позицию
+    :tabm -1                 переместить таб назад на одну позицию
+    :tabm 2                  переместить таб на заданную позици
+
+lets google it!
+---------------------------------------------------------------------------------------------------
+
