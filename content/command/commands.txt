@@ -62,7 +62,7 @@ You can write commands using pipe - :set hls is
 	:args                 - show the file you are editing
 	
 
-
+---------------Markdown stopped right here--------------------
 
 
 Интересная фича при переключении между файлами:
