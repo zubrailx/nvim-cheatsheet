@@ -76,7 +76,7 @@ Jumping:
 	
 	
 	<C-]>         - go to the hyperlink
-	<C-T>         - get back (pop the tag off)
+	<C-T>         - pop the tag off
 	
 	
 ---------------------------------------------------------------------------------------------------

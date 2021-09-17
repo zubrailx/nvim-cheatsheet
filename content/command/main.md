@@ -50,7 +50,7 @@ Syntax: `:help [subject]`
 ### View commands
 |        Command        |                                   Description                                   |
 | --------------------- | ------------------------------------------------------------------------------- |
-| :set (no/incv)number` | - set numbering on the left side of the screen                                  |
+|`:set (no/incv)number` | - set numbering on the left side of the screen                                  |
 | `:set ic`             | - ignore case                                                                   |
 | `:set noic`           | - switch off (for many commands)                                                |
 | `:set invic`          | - to toggle (for many commands)                                                 |
