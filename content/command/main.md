@@ -4,10 +4,11 @@ Go back to [README.MD](../../README.md)
 
 ### Command execution
 
-|    Command     |                   Description                    |
+| Command        | Description                                      |
 | -------------- | ------------------------------------------------ |
 | `:![command]`  | - execute shell command                          |
 | `:!![command]` | - execute command and put its output in the file |
+
 
 ### Help commands
 
@@ -21,10 +22,12 @@ Syntax: `:help [subject]`
 - `:help index `
 - `:help -t`
 
+
 ### Digraphs
 
 - `:digraphs` - to print character, that can't be printed with keyboard
     - `:digr` 
+
 
 ### Marks
 
@@ -34,38 +37,43 @@ Syntax: `:help [subject]`
   - `[` - the start of the last insert
   - `]` - the end of the last insert
 
+[comment]: <> (TODO add these marks in command section)
+
+
 ### Help prefixes
 
-|        Modes         |    Keybind     |     Help command     |
+| Modes                | Keybind        | Help command         |
 | -------------------- | -------------- | -------------------- |
 | normal-mode          | - `(nothing)`  | - `:help x`          |
 | control chars        | - `CTRL`       | -`:help CTRL-u`      |
 | visual-mode          | -`v`           | -`:help v_u    `     |
 | insert-mode          | -`i`           | -`:help i_<Esc>`     |
-| ex-mode              | -`:`           | -`:help :quit`        |
+| ex-mode              | -`:`           | -`:help :quit`       |
 | command-line editing | -`c`           | -`:help c_<Del>`     |
 | Vim command args     | -` `           | -`:help -r`          |
 | Options              | -`(both ends)` | -`:help 'textwidth'` |
 
+
 ### View commands
-|        Command        |                                   Description                                   |
-| --------------------- | ------------------------------------------------------------------------------- |
-|`:set (no/incv)number` | - set numbering on the left side of the screen                                  |
-| `:set ic`             | - ignore case                                                                   |
-| `:set noic`           | - switch off (for many commands)                                                |
-| `:set invic`          | - to toggle (for many commands)                                                 |
-| `:set hls[earch]`     | - highlight all matching phrases                                                |
-| `:set is`             | - show partial matches for a search phrase                                      |
-| `:nohlsearch`         | - clear the current highlighting                                                |
-| `:set incsearch`      | - the editor starts finding matches when you begin to write                     |
-| `:set autowrite`      | - write it when you always want to save changes                                 |
-| `:set hidden`         | - if you want to keep the contents of all your old buffers around while editing |
+| Command                | Description                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| `:set (no/incv)number` | - set numbering on the left side of the screen                                  |
+| `:set ic`              | - ignore case                                                                   |
+| `:set noic`            | - switch off (for many commands)                                                |
+| `:set invic`           | - to toggle (for many commands)                                                 |
+| `:set hls[earch]`      | - highlight all matching phrases                                                |
+| `:set is`              | - show partial matches for a search phrase                                      |
+| `:nohlsearch`          | - clear the current highlighting                                                |
+| `:set incsearch`       | - the editor starts finding matches when you begin to write                     |
+| `:set autowrite`       | - write it when you always want to save changes                                 |
+| `:set hidden`          | - if you want to keep the contents of all your old buffers around while editing |
 
 > You can also write commands using pipe - `:set hls is`
 
+
 ### Working with files
 
-|    Command     |                            Description                             |
+| Command        | Description                                                        |
 | -------------- | ------------------------------------------------------------------ |
 | `:q`           | - close the window, discarding changes                             |
 | `:q!`          | - close the window, without warning                                |
@@ -77,7 +85,7 @@ Syntax: `:help [subject]`
 | `:args`        | - show the file you are editing                                    |
 
 
-### File switching
+### File (Buffers) switching
 
 Interesting feature when switching between files:
 
@@ -85,21 +93,22 @@ first start: `$ nvim file1.txt file2.txt file3.txt` - opens the file1.txt.
 
 To switch the file print `:next` or `:previous` and save changes (or overload using !)
 
-| Command  |                                       Description                                        |
-| -------- | ---------------------------------------------------------------------------------------- |
+| Command  | Description                                                                                   |
+| -------- | --------------------------------------------------------------------------------------------- |
 | `1<C-^>` | - open file1.txt					"When first load there is no alternative file before you switch anywhere |
-| `2<C-^>` | - open file2.txt                                                                         |
-| `3<C-^>` | - open file3.txt                                                                         |
-| `<C-^>`  | - open file2.txt (previous(alternative) file)                                            |
+| `2<C-^>` | - open file2.txt                                                                              |
+| `3<C-^>` | - open file3.txt                                                                              |
+| `<C-^>`  | - open file2.txt (previous(alternative) file)                                                 |
+
 
 ### Move
-| Command |   Description    |
+| Command | Description      |
 | ------- | ---------------- |
 | `:$`    | - goto last line |
 
 
 ### Editing
-|      Command      |                                 Description                                  |
+| Command           | Description                                                                  |
 | ----------------- | ---------------------------------------------------------------------------- |
 | `:s/old/new   `   | - replaces first match old on new in this line                               |
 | `:s/old/new/g `   | - replaces all matches old on new in this line.                              |
@@ -110,9 +119,10 @@ To switch the file print `:next` or `:previous` and save changes (or overload us
 | `:r [filename]`   | - retrieving content of the file where the cursor is.                        |
 | `:r ![dir]`       | - reads the output of the dir command and puts it below the cursor position. |
 
+
 ### Windows
 
-|              Command              |                                          Description                                          |
+| Command                           | Description                                                                                   |
 | --------------------------------- | --------------------------------------------------------------------------------------------- |
 | `:[count] next`                   | - open the file in the list that is next to this one                                          |
 | `:previous or Next`               | - backwards                                                                                   |
@@ -124,7 +134,7 @@ To switch the file print `:next` or `:previous` and save changes (or overload us
 | `:last`                           | - open last file in the list                                                                  |
 |                                   |                                                                                               |
 | `:split [file]`                   | - split the window and open the file or nothing                                               |
-| `:[number]split ...`              | - number is a number of lines in a new window                                                 |
+| `:[number] split ...`             | - number is a number of lines in a new window                                                 |
 |                                   |                                                                                               |
 | `:[count] split[+command] [file]` | - this is how split can look like                                                             |
 |                                   |                                                                                               |
@@ -134,8 +144,9 @@ To switch the file print `:next` or `:previous` and save changes (or overload us
 |                                   |                                                                                               |
 | `:hide`                           | - close the current window but Vim knows that you are editing this file (hide it from screen) |
 
+
 ### Buffers
-|         Command          |                           Description                            |
+| Command                  | Description                                                      |
 | ------------------------ | ---------------------------------------------------------------- |
 | `:buffers`               | - find the information about the current buffers                 |
 |                          |                                                                  |
@@ -152,6 +163,7 @@ To switch the file print `:next` or `:previous` and save changes (or overload us
 | `:[s]blast`              | - go to the last buffer or if 's' also split                     |
 | `:[s]brewind :[s]bfirst` | - open first buffer                                              |
 | `:[s]bmodified count`    | - go to count modified buffer on the list (not number of buffer) |
+
 
 #### Flags
 |     |                          |
