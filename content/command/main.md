@@ -32,12 +32,6 @@ Syntax: `:help [subject]`
 ### Marks
 
 - `:marks` - to check all the existed marks 
-  - `'` - last place of the current file
-  - `"` - the place where you were at the file before closing it
-  - `[` - the start of the last insert
-  - `]` - the end of the last insert
-
-[comment]: <> (TODO add these marks in command section)
 
 
 ### Help prefixes
