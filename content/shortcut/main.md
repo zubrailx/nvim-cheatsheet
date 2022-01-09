@@ -106,11 +106,6 @@ Go back to [README.MD](../../README.md)
 | `n or /<Enter>` | - search for the same phrase again                                                                                                                                                     |
 | `N            ` | - search for in the opposite direction                                                                                                                                                 |
 |                 |                                                                                                                                                                                        |
-| `f[char]`       | - search along the current LINE (you need to go to e -> print fy)                                                                                                                      |
-| `F      `       | - search backward                                                                                                                                                                      |
-|                 |                                                                                                                                                                                        |
-| `t `            | - like f, but one character earlier                                                                                                                                                    |
-| `T `            | - like F, but one character earlier                                                                                                                                                    |
 
 ### Switching-Modes
 
@@ -188,6 +183,12 @@ Edit (Operations) [Normal mode]:			" can use counts `(3a!) = (a + !!!)`
 | f           | - up to the symbol                  |
 |             |                                     |
 | b           | - one word back                     |
+|             |                                     |
+| `f<*char>`  | - jump on the *char forward         |
+| `F<*char>`  | - jump on the *char backward        |
+|             |                                     |
+| `t<*char>`  | - jump up to the *char forward      |
+| `T<*char>`  | - jump up to the *char backward     |
 
 ### Macros
 
@@ -195,6 +196,7 @@ Edit (Operations) [Normal mode]:			" can use counts `(3a!) = (a + !!!)`
 | ---- | ------------------------------------------------------------------------------------- |
 | `qa` | - start recording macros, where a is a register `[a-z] `where you can put this macros |
 | `q`  | - finish recording macros                                                             |
+| `[*count]@<*char>` | - execute macro on the char *count times |
 
 *Wiki:*  https://vim.fandom.com/wiki/Macros - to hard...
 
