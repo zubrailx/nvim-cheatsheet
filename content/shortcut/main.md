@@ -330,13 +330,19 @@ mark a, but only one file can have mark A.
 
 
 ### Advanced shortcuts
-|             |                                    |
-| ----------- | ---------------------------------- |
-| `[*type]ib` | do something inside inner block    |
-| `[*type]iB` | do something inside curly brackets |
-|             |                                    |
+|             |                                               |
+| ----------- | --------------------------------------------- |
+| `[*type][*levels]ib` | do something inside inner block               |
+| `[*type][*levels]iB` | do something inside curly brackets            |
+|             |                                               |
+| `[*type][*levels]ab` | do something inside inner block with brackets |
+| `[*type][*levels]aB` | do something inside inner block with brackets |
+|             |                                               |
+|             |                                               |
 
 * *type - i.e. 'v', 'c', 'y' 
 * to make selection inclusive use can use 'a' instead of 'i'
+* replace 'B' and 'b' with something like '{' or '}', '(' or ')' to perform action inside them
+* *levels - levels of parens up
 
 > for more details use :help text-objects

@@ -4,3 +4,5 @@ terminal mode:
 https://gist.github.com/mahemoff/8967b5de067cffc67cec174cb3a9f49d
 
 https://neovim.io/doc/user/nvim_terminal_emulator.html
+
+<C-w> :q
