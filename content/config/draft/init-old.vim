@@ -1,20 +1,27 @@
 set nocompatible
 "-----------------------------------Plugins------------------------------------------"
 
+"Install PlugManager
+" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 call plug#begin(stdpath('data'))
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'preservim/nerdcommenter'
 Plug 'ervandew/supertab'
+Plug 'lervag/vimtex'
+"
+" latex
+" Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -32,33 +39,21 @@ call plug#end()
 au BufRead,BufNewFile *.inc,*.asm set filetype=nasm
 
 set modeline
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set textwidth=100
 set expandtab
 set autoindent " enable auto indentation of lines
 set backspace=indent,eol,start " let backspace delete over lines
 set cindent " allow vim to best-effort guess the indentation
 set fileformat=unix
+filetype plugin on
 
 " open new buffers without saving current modifications (buffer remains open)
 set hidden
 
-"-------------------------------------Shell-----------------------------------------"
-" set shell=C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe
-" command :terminal not working coz need to change shell to cmd.exe (but it is useless)
-"
-if has("win32")
-            set shell=C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe  
-            set shellcmdflag=/c\ powershell.exe\ -NoLogo\ -NoProfile\ -NonInteractive\ -ExecutionPolicy\ RemoteSigned
-                set shellpipe=|
-                    set shellredir=>
-                endif
-
-                function! Test()
-                      echo system("dir -name")
-                  endfunction
+" ---------------------------------Comments-----------------------------------------"
 
 
 "--------------------------------Layout, Encoding-----------------------------------"
@@ -76,7 +71,7 @@ set guioptions=0 "Отключаем панели прокрутки в GUI
 set showtabline=0 "Отключаем панель табов (окошки FTW)
 set ttimeoutlen=10 "Понижаем задержку ввода escape последовательностей
 
-syntax on
+syntax enable
 
 set statusline+=%F
 set laststatus=2
@@ -84,12 +79,13 @@ set laststatus=2
 
 set nu rnu " relative line numbering
 set showcmd
-set clipboard=unnamed " public copy/paste register
+set clipboard+=unnamedplus
 set ruler
 set noswapfile " doesn't create swap files
 set noshowmode
 set shortmess+=c
 set omnifunc=syntaxcomplete#Complete
+set mouse=a
 
 
 set pastetoggle=<F2> " enable paste mode
@@ -110,7 +106,7 @@ set t_Co=256
 
 " air-line
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'jellybeans'
+let g:airline_theme = 'minimalist'
 let g:airline#extensions#tabline#enabled = 1
 
 if !exists('g:airline_symbols')
@@ -144,3 +140,41 @@ tnoremap <Esc> <C-\><C-n>
 tnoremap <C-[> <C-\><C-n>
 " simulating i + <C-r>
 tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
+
+"-------------------------------------Latex-0--------------------------------------"
+let g:tex_flavor = 'latex'
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_quickfix_mode=2
+
+let g:vimtex_compiler_latexmk = {
+        \ 'build_dir' : 'build',
+        \ 'callback' : 1,
+        \ 'continuous' : 1,
+        \ 'executable' : 'latexmk',
+        \ 'hooks' : [],
+        \ 'options' : [
+        \   '-verbose',
+        \   '-file-line-error',
+        \   '-synctex=1',
+        \   '-interaction=nonstopmode',
+        \ ],
+        \}
+"set conceallevel=1
+"let g:tex_conceal='abdmg'
+
+
+" let g:vimtex_view_general_viewer = 'okular'
+" let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+
+" VimTeX uses latexmk as the default compiler backend. If you use it, which is
+" strongly recommended, you probably don't need to configure anything. If you
+" want another compiler backend, you can change it as follows. The list of
+" supported backends and further explanation is provided in the documentation,
+" see ":help vimtex-compiler".
+"
+" let g:vimtex_compiler_method = 'latexrun'
+
+" Most VimTeX mappings rely on localleader and this can be changed with the
+" following line. The default is usually fine and is the symbol "\".
+"
+" let maplocalleader = ","
