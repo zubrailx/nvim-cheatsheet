@@ -6,11 +6,11 @@ To start the quide use the links in table of contents down below.
 
 ## Table of contents
 
-* [Shortcuts](shortcut/README.md)
+* [Shortcuts](shortcuts/README.md)
 
-* [Commands](command)
+* [Commands](commands)
 
 * [Cheatsheet for vimrc | init.vim](init)
 
-* [Useful links](link)
+* [Useful links](links)
 
