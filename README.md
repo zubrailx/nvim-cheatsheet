@@ -10,7 +10,7 @@ To start the quide use the links in table of contents down below.
 
 * [Commands](commands)
 
-* [Cheatsheet for vimrc | init.vim](init)
+* [Comnfiguration](config)
 
 * [Useful links](links)
 
