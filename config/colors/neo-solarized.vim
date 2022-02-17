@@ -134,7 +134,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let colors_name = "NeoSolarized"
+let colors_name = "neo-solarized"
 
 "}}}
 
