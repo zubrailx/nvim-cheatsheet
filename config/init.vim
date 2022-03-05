@@ -46,7 +46,8 @@ set nowrap
 " Movement "{{{
 " -----------------------------------------------------------------------------
 set scrolloff=8
-set mouse=a
+" set mouse to normal and visual mode
+set mouse=nv
 
 "}}}
 
@@ -88,10 +89,11 @@ if exists("&termguicolors") && exists("&winblend")
   " enable pseudo-transparency for the popup-menu. 0 - fully opaque, 100 - fully transparent
   "" set pumblend=5
   set background=dark
-  " Use NeoSolarized
-  let g:neosolarized_termtrans=1
+
+  ""let g:neosolarized_termtrans=1
   runtime ./colors/neo-solarized.vim
-  colorscheme neo-solarized
+  runtime ./colors/base16-nord_custom.vim
+  colorscheme base16-nord_custom
 endif
 
 "}}}
@@ -101,6 +103,16 @@ endif
 " -----------------------------------------------------------------------------
 au BufRead,BufNewFile *.inc,*.asm set filetype=nasm
 
+augroup Binary
+  au!
+  au BufReadPre   *.bin,*.exe let &bin=1
+  au BufReadPost  *.bin,*.exe if &bin | %!xxd
+  au BufReadPost  *.bin,*.exe set ft=xxd | endif
+  au BufWritePre  *.bin,*.exe if &bin | %!xxd -r
+  au BufWritePre  *.bin,*.exe endif
+  au BufWritePost *.bin,*.exe if &bin | %!xxd
+  au BufWritePost *.bin,*.exe set nomod | endif
+augroup END
 "}}}
 
 
