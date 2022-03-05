@@ -33,6 +33,11 @@ Syntax: `:help [subject]`
 
 - `:marks` - to check all the existed marks 
 
+|             |                                  |
+| ----------- | -------------------------------- |
+| `:marks`    | - list of the current marks      |
+| `:delmarks` | - delete the mark                |
+
 
 ### Help prefixes
 
@@ -77,22 +82,6 @@ Syntax: `:help [subject]`
 | `:w[rite]`     | - write the changes                                                |
 | `:view [file]` | - works like vi, but the new file will be opened in read only mode |
 | `:args`        | - show the file you are editing                                    |
-
-
-### File (Buffers) switching
-
-Interesting feature when switching between files:
-
-first start: `$ nvim file1.txt file2.txt file3.txt` - opens the file1.txt. 
-
-To switch the file print `:next` or `:previous` and save changes (or overload using !)
-
-| Command  | Description                                                                                   |
-| -------- | --------------------------------------------------------------------------------------------- |
-| `1<C-^>` | - open file1.txt					"When first load there is no alternative file before you switch anywhere |
-| `2<C-^>` | - open file2.txt                                                                              |
-| `3<C-^>` | - open file3.txt                                                                              |
-| `<C-^>`  | - open file2.txt (previous(alternative) file)                                                 |
 
 
 ### Move
@@ -160,13 +149,29 @@ To switch the file print `:next` or `:previous` and save changes (or overload us
 
 
 #### Flags
-|     |                          |
-| --- | ------------------------ |
-| -   | - inactive buffer        |
-| h   | - buffer is hidden       |
-| %   | - current buffer         |
-| #   | - alternate buffer       |
-| +   | - file has been modified |
+|       |                          |
+| ---   | ------------------------ |
+| `-`   | - inactive buffer        |
+| `h`   | - buffer is hidden       |
+| `%`   | - current buffer         |
+| `#`   | - alternate buffer       |
+| `+`   | - file has been modified |
+
+
+### Work with tabs
+
+|                   |                                            |
+| ----------------- | ------------------------------------------ |
+| `:tabnew [fname]` | create new tab                             |
+| `:tabs          ` | print the list of tabs                     |
+| `:tabn          ` | next tab                                   |
+| `:tabp          ` | previous tab                               |
+| `<n>gt          ` | go to tab #n                               |
+| `gt             ` | next tab                                   |
+| `gT             ` | previous tab                               |
+| `:tabm +1       ` | move the tab forward one position          |
+| `:tabm -1       ` | move tab back one position                 |
+| `:tabm 2        ` | move the tab forward to the given position |
 
 
 ### Programming stuff

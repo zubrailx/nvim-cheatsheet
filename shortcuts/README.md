@@ -177,12 +177,12 @@ Edit (Operations) [Normal mode]:			" can use counts `(3a!) = (a + !!!)`
 | ----------- | ----------------------------------- |
 | `$ \ Shift` | - to the end of the line            |
 |             |                                     |
-| e           | - to the end of this word           |
-| w           | - to the beginning of the next word |
+| `e`         | - to the end of this word           |
+| `w`         | - to the beginning of the next word |
 |             |                                     |
-| f           | - up to the symbol                  |
+| `f`         | - up to the symbol                  |
 |             |                                     |
-| b           | - one word back                     |
+| `b`         | - one word back                     |
 |             |                                     |
 | `f<*char>`  | - jump on the *char forward         |
 | `F<*char>`  | - jump on the *char backward        |
@@ -200,6 +200,23 @@ Edit (Operations) [Normal mode]:			" can use counts `(3a!) = (a + !!!)`
 
 *Wiki:*  https://vim.fandom.com/wiki/Macros - to hard...
 
+
+### File (Buffers) switching
+
+Interesting feature when switching between files:
+
+first start: `$ nvim file1.txt file2.txt file3.txt` - opens the file1.txt. 
+
+To switch the file print `:next` or `:previous` and save changes (or overload using !)
+
+| Command  | Description                                                                                   |
+| -------- | --------------------------------------------------------------------------------------------- |
+| `1<C-^>` | - open file1.txt					"When first load there is no alternative file before you switch anywhere |
+| `2<C-^>` | - open file2.txt                                                                              |
+| `3<C-^>` | - open file3.txt                                                                              |
+| `<C-^>`  | - open file2.txt (previous(alternative) file)                                                 |
+
+
 ### Marks
 
 A mark allows you to record your current position so you can return to it later. Each file can have
@@ -210,9 +227,6 @@ mark a, but only one file can have mark A.
 | `'a`        | - goto mark                      |
 | `d'a`       | - delete up to mark              |
 | `y'a`       | - yank up to mark ...            |
-|             |                                  |
-| `:marks`    | - list of the current marks      |
-| `:delmarks` | - delete the mark                |
 
 
 #### Mark jumps default
@@ -245,7 +259,7 @@ mark a, but only one file can have mark A.
 | `<`             | - in reverse                                          |
 |                 |                                                       |
 | `=`             | - change indents in the text                          |
-| r, R , s, S = c |                                                       |
+|`r, R , s, S = c`|                                                       |
 
 
 ### Visual-Block mode 
@@ -315,32 +329,17 @@ mark a, but only one file can have mark A.
 
 *   `<C-r>`          - while in insert mode [like "`[reg]...`]
 
-## Work with tabs
-
-|                   |                                            |
-| ----------------- | ------------------------------------------ |
-| `:tabnew [fname]` | create new tab                             |
-| `:tabs          ` | print the list of tabs                     |
-| `:tabn          ` | next tab                                   |
-| `:tabp          ` | previous tab                               |
-| `<n>gt          ` | go to tab #n                               |
-| `gt             ` | next tab                                   |
-| `gT             ` | previous tab                               |
-| `:tabm +1       ` | move the tab forward one position          |
-| `:tabm -1       ` | move tab back one position                 |
-| `:tabm 2        ` | move the tab forward to the given position |
-
 
 ### Advanced shortcuts
-|             |                                               |
-| ----------- | --------------------------------------------- |
+|                      |                                               |
+| -------------------- | --------------------------------------------- |
 | `[*type][*levels]ib` | do something inside inner block               |
 | `[*type][*levels]iB` | do something inside curly brackets            |
-|             |                                               |
+|                      |                                               |
 | `[*type][*levels]ab` | do something inside inner block with brackets |
 | `[*type][*levels]aB` | do something inside inner block with brackets |
-|             |                                               |
-|             |                                               |
+|                      |                                               |
+|                      |                                               |
 
 * *type - i.e. 'v', 'c', 'y' 
 * to make selection inclusive use can use 'a' instead of 'i'
