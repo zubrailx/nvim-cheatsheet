@@ -99,7 +99,7 @@ endif
 "}}}
 
 
-" File types "{{{
+" File types, Groups "{{{
 " -----------------------------------------------------------------------------
 au BufRead,BufNewFile *.inc,*.asm set filetype=nasm
 
@@ -113,6 +113,11 @@ augroup Binary
   au BufWritePost *.bin,*.exe if &bin | %!xxd
   au BufWritePost *.bin,*.exe set nomod | endif
 augroup END
+
+augroup Focus
+  au BufLeave * silent! wall
+augroup END
+
 "}}}
 
 
