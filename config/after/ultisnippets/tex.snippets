@@ -100,10 +100,10 @@ context "math()"
 snippet <=> "\Leftrightarrow" iA
 \Leftrightarrow
 endsnippet
-priority 0
 
 
 # math brackets
+priority 0
 context "math()"
 snippet () "left($right)" iA
 \left(${1:${VISUAL}}\right)$0
@@ -141,11 +141,31 @@ snippet tt "text" iA
 \text{$1}$0
 endsnippet
 
+priority 10
 context "math()"
 snippet bar "\overline{$}" iA
 \overline{$1}
 endsnippet
 
+priority 20
+context "math()"
+snippet "([a-zA-Z])bar" "bar" riA
+\overline{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10
+context "math()"
+snippet "hat" "hat" riA
+\hat{$1}$0
+endsnippet
+
+priority 20
+context "math()"
+snippet "([a-zA-Z])hat" "hat" riA
+\hat{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 0
 context "math()"
 snippet td "to the ... power" iA
 ^{$1}$0
@@ -211,8 +231,8 @@ context "math()"
 snippet '(?<!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)' "ln" rwA
 \\`!p snip.rv = match.group(1)`
 endsnippet
-priority 0
 
+priority 0
 context "math()"
 snippet lim "\lim_{}" w
 \lim_{${1:n} \to ${2:\infty}}$0 
@@ -234,8 +254,8 @@ context "math()"
 snippet <-> "\leftrightarrow" iA
 \leftrightarrow
 endsnippet
-priority 0
 
+priority 0
 context "math()"
 snippet ** "cdot" iA
 \cdot 
